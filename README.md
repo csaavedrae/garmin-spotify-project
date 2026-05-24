@@ -1,7 +1,3 @@
-Here is a condensed, high-impact version of the `README.md` file tailored specifically for a clean, professional look on your GitHub repository landing page.
-
----
-
 # 🎵 Garmin-Spotify Connect Remote
 
 A full-stack, open-source companion system bridging a **Garmin Smartwatch** to an **Android Device** to unlock low-latency, hardware-level remote control over Spotify media playback via a localized Bluetooth data pipeline.
