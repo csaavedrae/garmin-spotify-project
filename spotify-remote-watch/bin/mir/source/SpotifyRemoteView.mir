@@ -1,0 +1,302 @@
+[ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Lang,3,14,18]; ]
+import Toybox.Lang;
+[ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc"; @line = 5; @symbol_classdef = [SpotifyRemoteView,5,6,23]; @symbol_extends<0> = [WatchUi,5,32,39]; @symbol_extends<1> = [View,5,40,44]; ]
+class SpotifyRemoteView extends WatchUi.View {
+    [ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc"; @line = 6; @position = 16; @symbol_vardef = [isPlaying,6,16,25]; @symbol_type<0> = [Boolean,6,29,36]; ]
+    private
+    var isPlaying as Boolean = false;
+    [ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc"; @line = 7; @position = 16; @symbol_vardef = [currentTrack,7,16,28]; @symbol_type<0> = [String,7,32,38]; ]
+    private
+    var currentTrack as String = "Waiting for Phone...";
+    [ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc"; @line = 8; @position = 16; @symbol_vardef = [currentArtist,8,16,29]; @symbol_type<0> = [String,8,33,39]; ]
+    private
+    var currentArtist as String = "";
+    [ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc"; @line = 10; @symbol_functiondef = [initialize,10,13,23]; ]
+    function initialize() as Void {
+C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_10_26_12_4_start:
+[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc" 11 8 ]
+        symbol [ View %tmp.2 11 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 11 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_10_26_12_4_stop:
+    }
+    [ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc"; @line = 14; @symbol_functiondef = [onUpdate,14,13,21]; @symbol_param<0> = [dc,14,22,24]; @symbol_param<0>_type<0> = [Dc,14,28,30]; ]
+    function onUpdate(dc as Dc) as Void {
+C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_14_40_35_4_start:
+[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc" 15 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 15 8 10 ];
+        symbol [ setColor %tmp.2 15 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 15 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 15 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        symbol [ Graphics %tmp.5 15 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 15 51 62 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc" 16 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 16 8 10 ];
+        symbol [ clear %tmp.8 16 11 16 ];
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc" 18 8 ]
+        [ "C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_14_40_35_4_start" "C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_14_40_35_4_stop" ]
+        %centerX.1 = local;
+        symbol [ centerX %centerX.1 18 12 19 ];
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 18 22 24 ];
+        symbol [ getWidth %tmp.10 18 25 33 ];
+        %tmp.10 = getv function %tmp.9 :getWidth;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        %tmp.12 = 2;
+        %tmp.13 = div %tmp.11 %tmp.12;
+        lputv %centerX.1 %tmp.13;
+        symbol [ centerX %centerX.1 18 12 19 ];
+[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc" 19 8 ]
+        [ "C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_14_40_35_4_start" "C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_14_40_35_4_stop" ]
+        %centerY.2 = local;
+        symbol [ centerY %centerY.2 19 12 19 ];
+        %tmp.14 = lgetv %dc;
+        symbol [ dc %tmp.14 19 22 24 ];
+        symbol [ getHeight %tmp.15 19 25 34 ];
+        %tmp.15 = getv function %tmp.14 :getHeight;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        %tmp.17 = 2;
+        %tmp.18 = div %tmp.16 %tmp.17;
+        lputv %centerY.2 %tmp.18;
+        symbol [ centerY %centerY.2 19 12 19 ];
+[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc" 22 8 ]
+        %tmp.19 = lgetv %dc;
+        symbol [ dc %tmp.19 22 8 10 ];
+        symbol [ setColor %tmp.20 22 11 19 ];
+        %tmp.20 = getv function %tmp.19 :setColor;
+        symbol [ Graphics %tmp.21 22 20 28 ];
+        %tmp.21 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.22 22 29 40 ];
+        %tmp.22 = getv %tmp.21 :COLOR_WHITE;
+        symbol [ Graphics %tmp.23 22 42 50 ];
+        %tmp.23 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.24 22 51 68 ];
+        %tmp.24 = getv %tmp.23 :COLOR_TRANSPARENT;
+        invoke %tmp.19 %tmp.20(%tmp.22, %tmp.24);
+[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc" 23 8 ]
+        %tmp.25 = lgetv %dc;
+        symbol [ dc %tmp.25 23 8 10 ];
+        symbol [ drawText %tmp.26 23 11 19 ];
+        %tmp.26 = getv function %tmp.25 :drawText;
+        %tmp.27 = lgetv %centerX.1;
+        symbol [ centerX %tmp.27 23 20 27 ];
+        %tmp.28 = lgetv %centerY.2;
+        symbol [ centerY %tmp.28 23 29 36 ];
+        %tmp.29 = 50;
+        %tmp.30 = sub %tmp.28 %tmp.29;
+        symbol [ Graphics %tmp.31 23 43 51 ];
+        %tmp.31 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.32 23 52 63 ];
+        %tmp.32 = getv %tmp.31 :FONT_MEDIUM;
+        symbol [ currentTrack %tmp.34 23 65 77 ];
+        %tmp.34 = getv ? :currentTrack;
+        symbol [ Graphics %tmp.35 23 79 87 ];
+        %tmp.35 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.36 23 88 107 ];
+        %tmp.36 = getv %tmp.35 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.25 %tmp.26(%tmp.27, %tmp.30, %tmp.32, %tmp.34, %tmp.36);
+[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc" 24 8 ]
+        %tmp.37 = lgetv %dc;
+        symbol [ dc %tmp.37 24 8 10 ];
+        symbol [ drawText %tmp.38 24 11 19 ];
+        %tmp.38 = getv function %tmp.37 :drawText;
+        %tmp.39 = lgetv %centerX.1;
+        symbol [ centerX %tmp.39 24 20 27 ];
+        %tmp.40 = lgetv %centerY.2;
+        symbol [ centerY %tmp.40 24 29 36 ];
+        %tmp.41 = 25;
+        %tmp.42 = sub %tmp.40 %tmp.41;
+        symbol [ Graphics %tmp.43 24 43 51 ];
+        %tmp.43 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.44 24 52 62 ];
+        %tmp.44 = getv %tmp.43 :FONT_SMALL;
+        symbol [ currentArtist %tmp.46 24 64 77 ];
+        %tmp.46 = getv ? :currentArtist;
+        symbol [ Graphics %tmp.47 24 79 87 ];
+        %tmp.47 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.48 24 88 107 ];
+        %tmp.48 = getv %tmp.47 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.37 %tmp.38(%tmp.39, %tmp.42, %tmp.44, %tmp.46, %tmp.48);
+[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc" 27 8 ]
+        %tmp.49 = lgetv %dc;
+        symbol [ dc %tmp.49 27 8 10 ];
+        symbol [ setColor %tmp.50 27 11 19 ];
+        %tmp.50 = getv function %tmp.49 :setColor;
+        %tmp.51 = 0x1DB954;
+        symbol [ Graphics %tmp.52 27 30 38 ];
+        %tmp.52 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.53 27 39 56 ];
+        %tmp.53 = getv %tmp.52 :COLOR_TRANSPARENT;
+        invoke %tmp.49 %tmp.50(%tmp.51, %tmp.53);
+[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc" 28 8 ]
+C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_28_8_34_8_if_stmt:
+        symbol [ isPlaying %tmp.55 28 12 21 ];
+        %tmp.55 = getv ? :isPlaying;
+        bf %tmp.55 @C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_28_8_34_8_if_else_false;
+C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_28_8_34_8_if_true:
+C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_28_23_31_8_start:
+[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc" 29 12 ]
+        %tmp.56 = lgetv %dc;
+        symbol [ dc %tmp.56 29 12 14 ];
+        symbol [ fillRectangle %tmp.57 29 15 28 ];
+        %tmp.57 = getv function %tmp.56 :fillRectangle;
+        %tmp.58 = lgetv %centerX.1;
+        symbol [ centerX %tmp.58 29 29 36 ];
+        %tmp.59 = 8;
+        %tmp.60 = sub %tmp.58 %tmp.59;
+        %tmp.61 = lgetv %centerY.2;
+        symbol [ centerY %tmp.61 29 42 49 ];
+        %tmp.62 = 20;
+        %tmp.63 = add %tmp.61 %tmp.62;
+        %tmp.64 = 5;
+        %tmp.65 = 18;
+        invoke %tmp.56 %tmp.57(%tmp.60, %tmp.63, %tmp.64, %tmp.65);
+[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc" 30 12 ]
+        %tmp.66 = lgetv %dc;
+        symbol [ dc %tmp.66 30 12 14 ];
+        symbol [ fillRectangle %tmp.67 30 15 28 ];
+        %tmp.67 = getv function %tmp.66 :fillRectangle;
+        %tmp.68 = lgetv %centerX.1;
+        symbol [ centerX %tmp.68 30 29 36 ];
+        %tmp.69 = 3;
+        %tmp.70 = add %tmp.68 %tmp.69;
+        %tmp.71 = lgetv %centerY.2;
+        symbol [ centerY %tmp.71 30 42 49 ];
+        %tmp.72 = 20;
+        %tmp.73 = add %tmp.71 %tmp.72;
+        %tmp.74 = 5;
+        %tmp.75 = 18;
+        invoke %tmp.66 %tmp.67(%tmp.70, %tmp.73, %tmp.74, %tmp.75);
+C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_28_23_31_8_stop:
+        goto @C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_28_8_34_8_if_end;
+C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_28_8_34_8_if_else_false:
+C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_31_15_34_8_start:
+[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc" 32 12 ]
+        [ "C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_31_15_34_8_start" "C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_31_15_34_8_stop" ]
+        %pts.3 = local;
+        symbol [ pts %pts.3 32 16 19 ];
+        %tmp.76 = newa 3;
+        %tmp.77 = newa 2;
+        %tmp.78 = lgetv %centerX.1;
+        symbol [ centerX %tmp.78 32 24 31 ];
+        %tmp.79 = 5;
+        %tmp.80 = sub %tmp.78 %tmp.79;
+        %tmp.81 = dup %tmp.77;
+        %tmp.82 = aputv %tmp.81 0 %tmp.80;
+        %tmp.83 = lgetv %centerY.2;
+        symbol [ centerY %tmp.83 32 37 44 ];
+        %tmp.84 = 18;
+        %tmp.85 = add %tmp.83 %tmp.84;
+        %tmp.86 = dup %tmp.82;
+        %tmp.87 = aputv %tmp.86 1 %tmp.85;
+        %tmp.88 = dup %tmp.76;
+        %tmp.89 = aputv %tmp.88 0 %tmp.87;
+        %tmp.90 = newa 2;
+        %tmp.91 = lgetv %centerX.1;
+        symbol [ centerX %tmp.91 32 53 60 ];
+        %tmp.92 = 5;
+        %tmp.93 = sub %tmp.91 %tmp.92;
+        %tmp.94 = dup %tmp.90;
+        %tmp.95 = aputv %tmp.94 0 %tmp.93;
+        %tmp.96 = lgetv %centerY.2;
+        symbol [ centerY %tmp.96 32 66 73 ];
+        %tmp.97 = 38;
+        %tmp.98 = add %tmp.96 %tmp.97;
+        %tmp.99 = dup %tmp.95;
+        %tmp.100 = aputv %tmp.99 1 %tmp.98;
+        %tmp.101 = dup %tmp.89;
+        %tmp.102 = aputv %tmp.101 1 %tmp.100;
+        %tmp.103 = newa 2;
+        %tmp.104 = lgetv %centerX.1;
+        symbol [ centerX %tmp.104 32 82 89 ];
+        %tmp.105 = 12;
+        %tmp.106 = add %tmp.104 %tmp.105;
+        %tmp.107 = dup %tmp.103;
+        %tmp.108 = aputv %tmp.107 0 %tmp.106;
+        %tmp.109 = lgetv %centerY.2;
+        symbol [ centerY %tmp.109 32 96 103 ];
+        %tmp.110 = 28;
+        %tmp.111 = add %tmp.109 %tmp.110;
+        %tmp.112 = dup %tmp.108;
+        %tmp.113 = aputv %tmp.112 1 %tmp.111;
+        %tmp.114 = dup %tmp.102;
+        %tmp.115 = aputv %tmp.114 2 %tmp.113;
+        lputv %pts.3 %tmp.115;
+        symbol [ pts %pts.3 32 16 19 ];
+[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc" 33 12 ]
+        %tmp.116 = lgetv %dc;
+        symbol [ dc %tmp.116 33 12 14 ];
+        symbol [ fillPolygon %tmp.117 33 15 26 ];
+        %tmp.117 = getv function %tmp.116 :fillPolygon;
+        %tmp.118 = lgetv %pts.3;
+        symbol [ pts %tmp.118 33 27 30 ];
+        invoke %tmp.116 %tmp.117(%tmp.118);
+C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_31_15_34_8_stop:
+C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_28_8_34_8_if_end:
+C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_14_40_35_4_stop:
+    }
+    [ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc"; @line = 38; @symbol_functiondef = [updateTrackInfo,38,13,28]; @symbol_param<0> = [trackName,38,29,38]; @symbol_param<0>_type<0> = [String,38,42,48]; @symbol_param<1> = [artistName,38,50,60]; @symbol_param<1>_type<0> = [String,38,64,70]; ]
+    function updateTrackInfo(trackName as String, artistName as String) as Void {
+C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_38_80_42_4_start:
+[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc" 39 8 ]
+        %tmp.1 = lgetv %trackName;
+        symbol [ trackName %tmp.1 39 23 32 ];
+        symbol [ currentTrack ? 39 8 20 ];
+        putv self :currentTrack %tmp.1;
+[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc" 40 8 ]
+        %tmp.2 = lgetv %artistName;
+        symbol [ artistName %tmp.2 40 24 34 ];
+        symbol [ currentArtist ? 40 8 21 ];
+        putv self :currentArtist %tmp.2;
+[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc" 41 8 ]
+        symbol [ WatchUi %tmp.3 41 8 15 ];
+        %tmp.3 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.4 41 16 29 ];
+        %tmp.4 = getv function %tmp.3 :requestUpdate;
+        invoke %tmp.3 %tmp.4();
+C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_38_80_42_4_stop:
+    }
+    [ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc"; @line = 44; @symbol_functiondef = [togglePlaybackVisual,44,13,33]; ]
+    function togglePlaybackVisual() as Void {
+C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_44_44_47_4_start:
+[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc" 45 8 ]
+        symbol [ isPlaying %tmp.2 45 21 30 ];
+        %tmp.2 = getv ? :isPlaying;
+        %tmp.3 = not %tmp.2;
+        symbol [ isPlaying ? 45 8 17 ];
+        putv self :isPlaying %tmp.3;
+[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc" 46 8 ]
+        symbol [ WatchUi %tmp.4 46 8 15 ];
+        %tmp.4 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.5 46 16 29 ];
+        %tmp.5 = getv function %tmp.4 :requestUpdate;
+        invoke %tmp.4 %tmp.5();
+C__Users_carme_VSCode_Projects_SpotifyRemote_source_SpotifyRemoteView_mc_44_44_47_4_stop:
+    }
+}
+[ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\SpotifyRemoteView.mc"; @line = 1; ]
+<init> {
+}

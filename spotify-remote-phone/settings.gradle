@@ -1,0 +1,17 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+/*dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}*/ //Commenting out to resolve dependencies issue
+
+rootProject.name = 'spotify-remote-phone'
+include ':app'  // <-- This tells Gradle your app folder exists!

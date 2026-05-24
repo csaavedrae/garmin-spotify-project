@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../notion-automation"
+		},
+		{
+			"name": "SpotifyRemote",
+			"path": "../SpotifyRemote"
+		}
+	],
+	"settings": {}
+}
