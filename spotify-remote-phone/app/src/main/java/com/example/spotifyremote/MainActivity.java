@@ -3,6 +3,8 @@ package com.example.spotifyremote;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,8 +28,7 @@ public class MainActivity extends AppCompatActivity {
             "bd3245ea-175c-451c-b85c-58e898904fb9";
 
     // Spotify Config
-    private static final String SPOTIFY_CLIENT_ID =
-            BuildConfig.SPOTIFY_CLIENT_ID;
+    private static final String SPOTIFY_CLIENT_ID = "c196a88a370e461c9687ae590b152674"; // harcoding for testing   BuildConfig.SPOTIFY_CLIENT_ID;
 
     private static final String SPOTIFY_REDIRECT_URI =
             "com.example.spotifyremote://callback";
@@ -41,11 +42,52 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+         // Layout container
+        LinearLayout layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+        layout.setPadding(40, 40, 40, 40);
+
+        // Status text
         mStatusTextView = new TextView(this);
-        mStatusTextView.setText("Starting Spotify Remote...");
+        mStatusTextView.setText("Status: Starting...");
         mStatusTextView.setTextSize(18);
 
-        setContentView(mStatusTextView);
+        // Restart Spotify button
+        Button spotifyButton = new Button(this);
+        spotifyButton.setText("Reconnect Spotify");
+        spotifyButton.setOnClickListener(v -> {
+            updateUI("Reconnecting Spotify...");
+            connectToSpotify();
+        });
+
+        // Restart Garmin button
+        Button garminButton = new Button(this);
+        garminButton.setText("Reconnect Garmin");
+        garminButton.setOnClickListener(v -> {
+            updateUI("Reconnecting Garmin...");
+            connectToGarmin();
+        });
+
+        // Full reconnect button
+        Button fullReconnectButton = new Button(this);
+        fullReconnectButton.setText("Restart All Connections");
+        fullReconnectButton.setOnClickListener(v -> {
+            updateUI("Restarting all connections...");
+            disconnectSDKs();
+
+            new android.os.Handler().postDelayed(() -> {
+                connectToSpotify();
+                connectToGarmin();
+            }, 1000);
+        });
+
+        // Add views
+        layout.addView(mStatusTextView);
+        layout.addView(spotifyButton);
+        layout.addView(garminButton);
+        layout.addView(fullReconnectButton);
+
+        setContentView(layout);
 
         // Garmin Watch App Reference
         mGarminApp = new IQApp(GARMIN_APP_UUID);
@@ -55,6 +97,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
+        Log.d(TAG, "onStart called");
+
+        updateUI("Starting connections...");
+        
         connectToSpotify();
         connectToGarmin();
     }
@@ -72,37 +118,45 @@ public class MainActivity extends AppCompatActivity {
 
     private void connectToSpotify() {
 
-        ConnectionParams connectionParams =
-                new ConnectionParams.Builder(SPOTIFY_CLIENT_ID)
-                        .setRedirectUri(SPOTIFY_REDIRECT_URI)
-                        .showAuthView(true)
-                        .build();
+    Log.d(TAG, "Starting Spotify connection");
+    updateUI("Connecting to Spotify...");
 
-        SpotifyAppRemote.connect(
-                this,
-                connectionParams,
-                new Connector.ConnectionListener() {
+    ConnectionParams connectionParams =
+            new ConnectionParams.Builder(SPOTIFY_CLIENT_ID)
+                    .setRedirectUri(SPOTIFY_REDIRECT_URI)
+                    .showAuthView(true)
+                    .build();
 
-                    @Override
-                    public void onConnected(SpotifyAppRemote spotifyAppRemote) {
+    SpotifyAppRemote.connect(this, connectionParams,
+            new Connector.ConnectionListener() {
 
-                        mSpotifyAppRemote = spotifyAppRemote;
+                @Override
+                public void onConnected(SpotifyAppRemote spotifyAppRemote) {
 
-                        updateUI("Connected to Spotify");
+                    mSpotifyAppRemote = spotifyAppRemote;
 
-                        listenToSpotifyTrackChanges();
-                    }
+                    Log.d(TAG, "Spotify connected");
+                    updateUI("Connected to Spotify!");
 
-                    @Override
-                    public void onFailure(Throwable throwable) {
+                    listenToSpotifyTrackChanges();
+                }
 
-                        Log.e(TAG, "Spotify connection failed", throwable);
+                @Override
+                public void onFailure(Throwable throwable) {
 
+                    Log.e(TAG, "Spotify connection failed", throwable);
+                    String errorMessage = throwable.getMessage();
+
+                    if (errorMessage != null) {
+                        updateUI("Spotify error: " + errorMessage);
+                    } else {
                         updateUI("Spotify connection failed");
                     }
+
+                    throwable.printStackTrace();
                 }
-        );
-    }
+            });
+}
 
     // ---------------------------------------------------
     // GARMIN CONNECTION
@@ -124,37 +178,28 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onSdkReady() {
 
-                        Log.d(TAG, "ConnectIQ SDK Ready");
+                        updateUI("Garmin Connected");
+
+                        registerWatchListeners();
 
                         try {
 
-                            List<IQDevice> pairedDevices =
-                                    mConnectIQ.getKnownDevices();
+                            List<IQDevice> pairedDevices = mConnectIQ.getKnownDevices();
 
-                            if (pairedDevices != null) {
+                            for (IQDevice device : pairedDevices) {
 
-                                for (IQDevice device : pairedDevices) {
+                                mConnectIQ.registerForDeviceEvents(device, (iqDevice, status) -> {
 
-                                    mConnectIQ.registerForDeviceEvents(
-                                            device,
-                                            (iqDevice, status) -> {
+                                    Log.d("GARMIN", "Device status: " + status);
 
-                                                Log.d(
-                                                        TAG,
-                                                        "Device Status: " + status
-                                                );
-                                            }
-                                    );
-                                }
+                                });
+
                             }
-
-                            registerWatchListeners();
-
-                            updateUI("Garmin Connected");
 
                         } catch (Exception e) {
 
-                            Log.e(TAG, "Garmin init error", e);
+                            Log.e("GARMIN", "ConnectIQ error", e);
+
                         }
                     }
 
@@ -211,6 +256,7 @@ public class MainActivity extends AppCompatActivity {
 
                                 executeWatchAction(
                                         dataMap.get("action")
+                                        Log.d(TAG, "Received watch action: " + action);
                                 );
                             }
                         }
