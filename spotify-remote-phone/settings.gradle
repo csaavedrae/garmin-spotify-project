@@ -5,13 +5,23 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-/*dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+
     repositories {
         google()
         mavenCentral()
-    }
-}*/ //Commenting out to resolve dependencies issue
 
-rootProject.name = 'spotify-remote-phone'
-include ':app'  // <-- This tells Gradle your app folder exists!
+        maven {
+            url = uri("https://developer.garmin.com/downloads/connect-iq/maven/")
+        }
+
+        maven {
+        url = uri("https://jitpack.io")
+        }
+    }
+}
+
+rootProject.name = "spotify-remote-phone"
+include(":app")
