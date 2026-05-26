@@ -37,60 +37,35 @@ public class MainActivity extends AppCompatActivity {
     private IQApp mGarminApp;
     private SpotifyAppRemote mSpotifyAppRemote;
     private TextView mStatusTextView;
+    private Button mSpotifyButton;
+    private Button mGarminButton;
+    private Button mRestartButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-         // Layout container
-        LinearLayout layout = new LinearLayout(this);
-        layout.setOrientation(LinearLayout.VERTICAL);
-        layout.setPadding(40, 40, 40, 40);
+        // Basic UI Setup 
+        setContentView(R.layout.activity_main);
 
-        // Status text
-        mStatusTextView = new TextView(this);
-        mStatusTextView.setText("Status: Starting...");
-        mStatusTextView.setTextSize(18);
+        mStatusTextView = findViewById(R.id.statusText);
 
-        // Restart Spotify button
-        Button spotifyButton = new Button(this);
-        spotifyButton.setText("Reconnect Spotify");
-        spotifyButton.setOnClickListener(v -> {
-            updateUI("Reconnecting Spotify...");
-            connectToSpotify();
-        });
-
-        // Restart Garmin button
-        Button garminButton = new Button(this);
-        garminButton.setText("Reconnect Garmin");
-        garminButton.setOnClickListener(v -> {
-            updateUI("Reconnecting Garmin...");
-            connectToGarmin();
-        });
-
-        // Full reconnect button
-        Button fullReconnectButton = new Button(this);
-        fullReconnectButton.setText("Restart All Connections");
-        fullReconnectButton.setOnClickListener(v -> {
-            updateUI("Restarting all connections...");
-            disconnectSDKs();
-
-            new android.os.Handler().postDelayed(() -> {
-                connectToSpotify();
-                connectToGarmin();
-            }, 1000);
-        });
-
-        // Add views
-        layout.addView(mStatusTextView);
-        layout.addView(spotifyButton);
-        layout.addView(garminButton);
-        layout.addView(fullReconnectButton);
-
-        setContentView(layout);
+        mSpotifyButton = findViewById(R.id.connectSpotifyButton);
+        mGarminButton = findViewById(R.id.connectGarminButton);
+        mRestartButton = findViewById(R.id.restartButton);
 
         // Garmin Watch App Reference
         mGarminApp = new IQApp(GARMIN_APP_UUID);
+
+        // THE FIX: ADD CLICK LISTENERS HERE
+        mSpotifyButton.setOnClickListener(v -> connectToSpotify());
+        
+        mGarminButton.setOnClickListener(v -> connectToGarmin());
+        
+        mRestartButton.setOnClickListener(v -> {
+            disconnectSDKs();
+            updateUI("Ready - press a button to connect");
+        });
     }
 
     @Override
@@ -101,8 +76,10 @@ public class MainActivity extends AppCompatActivity {
 
         updateUI("Starting connections...");
         
-        connectToSpotify();
-        connectToGarmin();
+        //connectToSpotify();
+        //connectToGarmin();
+        //Commented out to split connections independently
+        updateUI("Ready - press a button to connect");
     }
 
     @Override
@@ -254,10 +231,11 @@ public class MainActivity extends AppCompatActivity {
                                 Map<String, String> dataMap =
                                         (Map<String, String>) list.get(0);
 
-                                executeWatchAction(
-                                        dataMap.get("action")
-                                        Log.d(TAG, "Received watch action: " + action);
-                                );
+                                String action = dataMap.get("action");
+
+                                Log.d(TAG, "Received watch action: " + action);
+
+                                executeWatchAction(action);
                             }
                         }
                 );
