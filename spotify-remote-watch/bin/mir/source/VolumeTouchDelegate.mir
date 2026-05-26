@@ -1,32 +1,32 @@
-[ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [WatchUi,1,14,21]; ]
+[ @file = "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [WatchUi,1,14,21]; ]
 import Toybox.WatchUi;
-[ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Communications,2,14,28]; ]
+[ @file = "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Communications,2,14,28]; ]
 import Toybox.Communications;
-[ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc"; @line = 4; @symbol_classdef = [VolumeTouchDelegate,4,6,25]; @symbol_extends<0> = [WatchUi,4,34,41]; @symbol_extends<1> = [InputDelegate,4,42,55]; ]
+[ @file = "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc"; @line = 4; @symbol_classdef = [VolumeTouchDelegate,4,6,25]; @symbol_extends<0> = [WatchUi,4,34,41]; @symbol_extends<1> = [InputDelegate,4,42,55]; ]
 class VolumeTouchDelegate extends WatchUi.InputDelegate {
-    [ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc"; @line = 4; ]
+    [ @file = "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc"; @line = 4; ]
     <init> {
     }
-    [ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc"; @line = 4; ]
+    [ @file = "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc"; @line = 4; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc"; @line = 6; @symbol_functiondef = [initialize,6,13,23]; ]
+    [ @file = "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc"; @line = 6; @symbol_functiondef = [initialize,6,13,23]; ]
     function initialize() as Void {
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_6_26_8_4_start:
-[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc" 7 8 ]
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_6_26_8_4_start:
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc" 7 8 ]
         symbol [ InputDelegate %tmp.2 7 8 21 ];
         %tmp.2 = getv ? :InputDelegate;
         symbol [ initialize %tmp.3 7 22 32 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_6_26_8_4_stop:
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_6_26_8_4_stop:
     }
-    [ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc"; @line = 11; @symbol_functiondef = [onTap,11,13,18]; @symbol_param<0> = [clickEvent,11,19,29]; @symbol_param<0>_type<0> = [WatchUi,11,33,40]; @symbol_param<0>_type<1> = [ClickEvent,11,41,51]; @symbol_return<0> = [Boolean,11,56,63]; ]
+    [ @file = "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc"; @line = 11; @symbol_functiondef = [onTap,11,13,18]; @symbol_param<0> = [clickEvent,11,19,29]; @symbol_param<0>_type<0> = [WatchUi,11,33,40]; @symbol_param<0>_type<1> = [ClickEvent,11,41,51]; @symbol_return<0> = [Boolean,11,56,63]; ]
     function onTap(clickEvent as WatchUi.ClickEvent) as Boolean {
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_11_64_26_4_start:
-[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc" 12 8 ]
-        [ "C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_11_64_26_4_start" "C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_11_64_26_4_stop" ]
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_11_64_26_4_start:
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc" 12 8 ]
+        [ "C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_11_64_26_4_start" "C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_11_64_26_4_stop" ]
         %coordinates.1 = local;
         symbol [ coordinates %coordinates.1 12 12 23 ];
         %tmp.1 = lgetv %clickEvent;
@@ -36,8 +36,8 @@ C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_11_64
         %tmp.3 = invoke %tmp.1 %tmp.2();
         lputv %coordinates.1 %tmp.3;
         symbol [ coordinates %coordinates.1 12 12 23 ];
-[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc" 13 8 ]
-        [ "C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_11_64_26_4_start" "C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_11_64_26_4_stop" ]
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc" 13 8 ]
+        [ "C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_11_64_26_4_start" "C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_11_64_26_4_stop" ]
         %tapY.2 = local;
         symbol [ tapY %tapY.2 13 12 16 ];
         %tmp.4 = lgetv %coordinates.1;
@@ -46,8 +46,8 @@ C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_11_64
         %tmp.6 = agetv %tmp.4 %tmp.5;
         lputv %tapY.2 %tmp.6;
         symbol [ tapY %tapY.2 13 12 16 ];
-[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc" 16 8 ]
-        [ "C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_11_64_26_4_start" "C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_11_64_26_4_stop" ]
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc" 16 8 ]
+        [ "C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_11_64_26_4_start" "C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_11_64_26_4_stop" ]
         %viewHeight.3 = local;
         symbol [ viewHeight %viewHeight.3 16 12 22 ];
         symbol [ WatchUi %tmp.7 16 25 32 ];
@@ -62,8 +62,8 @@ C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_11_64
         %tmp.13 = invoke %tmp.11 %tmp.12();
         lputv %viewHeight.3 %tmp.13;
         symbol [ viewHeight %viewHeight.3 16 12 22 ];
-[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc" 18 8 ]
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_18_8_24_8_if_stmt:
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc" 18 8 ]
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_18_8_24_8_if_stmt:
         %tmp.14 = lgetv %tapY.2;
         symbol [ tapY %tmp.14 18 12 16 ];
         %tmp.15 = lgetv %viewHeight.3;
@@ -71,37 +71,37 @@ C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_18_8_
         %tmp.16 = 2;
         %tmp.17 = div %tmp.15 %tmp.16;
         %tmp.18 = lt %tmp.14 %tmp.17;
-        bf %tmp.18 @C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_18_8_24_8_if_else_false;
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_18_8_24_8_if_true:
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_18_37_21_8_start:
-[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc" 20 12 ]
+        bf %tmp.18 @C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_18_8_24_8_if_else_false;
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_18_8_24_8_if_true:
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_18_37_21_8_start:
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc" 20 12 ]
         %tmp.19 = self;
         symbol [ sendBluetoothMessage %tmp.20 20 12 32 ];
         %tmp.20 = getv function %tmp.19 :sendBluetoothMessage;
         %tmp.21 = "VOLUME_UP";
         invoke %tmp.19 %tmp.20(%tmp.21);
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_18_37_21_8_stop:
-        goto @C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_18_8_24_8_if_end;
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_18_8_24_8_if_else_false:
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_21_15_24_8_start:
-[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc" 23 12 ]
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_18_37_21_8_stop:
+        goto @C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_18_8_24_8_if_end;
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_18_8_24_8_if_else_false:
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_21_15_24_8_start:
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc" 23 12 ]
         %tmp.22 = self;
         symbol [ sendBluetoothMessage %tmp.23 23 12 32 ];
         %tmp.23 = getv function %tmp.22 :sendBluetoothMessage;
         %tmp.24 = "VOLUME_DOWN";
         invoke %tmp.22 %tmp.23(%tmp.24);
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_21_15_24_8_stop:
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_18_8_24_8_if_end:
-[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc" 25 8 ]
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_21_15_24_8_stop:
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_18_8_24_8_if_end:
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc" 25 8 ]
         %tmp.25 = true;
         ret %tmp.25;
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_11_64_26_4_stop:
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_11_64_26_4_stop:
     }
-    [ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc"; @line = 29; @symbol_functiondef = [onKey,29,13,18]; @symbol_param<0> = [keyEvent,29,19,27]; @symbol_param<0>_type<0> = [WatchUi,29,31,38]; @symbol_param<0>_type<1> = [KeyEvent,29,39,47]; @symbol_return<0> = [Boolean,29,52,59]; ]
+    [ @file = "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc"; @line = 29; @symbol_functiondef = [onKey,29,13,18]; @symbol_param<0> = [keyEvent,29,19,27]; @symbol_param<0>_type<0> = [WatchUi,29,31,38]; @symbol_param<0>_type<1> = [KeyEvent,29,39,47]; @symbol_return<0> = [Boolean,29,52,59]; ]
     function onKey(keyEvent as WatchUi.KeyEvent) as Boolean {
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_29_60_48_4_start:
-[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc" 30 8 ]
-        [ "C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_29_60_48_4_start" "C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_29_60_48_4_stop" ]
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_29_60_48_4_start:
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc" 30 8 ]
+        [ "C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_29_60_48_4_start" "C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_29_60_48_4_stop" ]
         %key.1 = local;
         symbol [ key %key.1 30 12 15 ];
         %tmp.1 = lgetv %keyEvent;
@@ -111,8 +111,8 @@ C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_29_60
         %tmp.3 = invoke %tmp.1 %tmp.2();
         lputv %key.1 %tmp.3;
         symbol [ key %key.1 30 12 15 ];
-[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc" 32 8 ]
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_32_8_46_8_if_stmt:
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc" 32 8 ]
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_32_8_46_8_if_stmt:
         %tmp.4 = lgetv %key.1;
         symbol [ key %tmp.4 32 12 15 ];
         symbol [ WatchUi %tmp.5 32 19 26 ];
@@ -120,23 +120,23 @@ C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_32_8_
         symbol [ KEY_ENTER %tmp.6 32 27 36 ];
         %tmp.6 = getv %tmp.5 :KEY_ENTER;
         %tmp.7 = eq %tmp.4 %tmp.6;
-        bf %tmp.7 @C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_32_8_46_8_if_false;
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_32_8_46_8_if_true:
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_32_38_36_8_start:
-[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc" 34 12 ]
+        bf %tmp.7 @C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_32_8_46_8_if_false;
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_32_8_46_8_if_true:
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_32_38_36_8_start:
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc" 34 12 ]
         %tmp.8 = self;
         symbol [ sendBluetoothMessage %tmp.9 34 12 32 ];
         %tmp.9 = getv function %tmp.8 :sendBluetoothMessage;
         %tmp.10 = "NEXT_TRACK";
         invoke %tmp.8 %tmp.9(%tmp.10);
-[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc" 35 12 ]
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc" 35 12 ]
         %tmp.11 = true;
         ret %tmp.11;
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_32_38_36_8_stop:
-        goto @C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_32_8_46_8_if_end;
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_32_8_46_8_if_false:
-[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc" 37 13 ]
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_37_13_46_8_if_stmt:
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_32_38_36_8_stop:
+        goto @C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_32_8_46_8_if_end;
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_32_8_46_8_if_false:
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc" 37 13 ]
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_37_13_46_8_if_stmt:
         %tmp.12 = lgetv %key.1;
         symbol [ key %tmp.12 37 17 20 ];
         symbol [ WatchUi %tmp.13 37 24 31 ];
@@ -144,23 +144,23 @@ C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_37_13
         symbol [ KEY_DOWN %tmp.14 37 32 40 ];
         %tmp.14 = getv %tmp.13 :KEY_DOWN;
         %tmp.15 = eq %tmp.12 %tmp.14;
-        bf %tmp.15 @C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_37_13_46_8_if_false;
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_37_13_46_8_if_true:
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_37_42_41_8_start:
-[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc" 39 12 ]
+        bf %tmp.15 @C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_37_13_46_8_if_false;
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_37_13_46_8_if_true:
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_37_42_41_8_start:
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc" 39 12 ]
         %tmp.16 = self;
         symbol [ sendBluetoothMessage %tmp.17 39 12 32 ];
         %tmp.17 = getv function %tmp.16 :sendBluetoothMessage;
         %tmp.18 = "PREV_TRACK";
         invoke %tmp.16 %tmp.17(%tmp.18);
-[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc" 40 12 ]
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc" 40 12 ]
         %tmp.19 = true;
         ret %tmp.19;
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_37_42_41_8_stop:
-        goto @C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_37_13_46_8_if_end;
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_37_13_46_8_if_false:
-[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc" 42 13 ]
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_42_13_46_8_if_stmt:
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_37_42_41_8_stop:
+        goto @C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_37_13_46_8_if_end;
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_37_13_46_8_if_false:
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc" 42 13 ]
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_42_13_46_8_if_stmt:
         %tmp.20 = lgetv %key.1;
         symbol [ key %tmp.20 42 17 20 ];
         symbol [ WatchUi %tmp.21 42 24 31 ];
@@ -168,10 +168,10 @@ C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_42_13
         symbol [ KEY_ESC %tmp.22 42 32 39 ];
         %tmp.22 = getv %tmp.21 :KEY_ESC;
         %tmp.23 = eq %tmp.20 %tmp.22;
-        bf %tmp.23 @C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_42_13_46_8_if_end;
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_42_13_46_8_if_true:
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_42_41_46_8_start:
-[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc" 44 12 ]
+        bf %tmp.23 @C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_42_13_46_8_if_end;
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_42_13_46_8_if_true:
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_42_41_46_8_start:
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc" 44 12 ]
         symbol [ WatchUi %tmp.24 44 12 19 ];
         %tmp.24 = getm $.Toybox.WatchUi;
         symbol [ popView %tmp.25 44 20 27 ];
@@ -181,23 +181,23 @@ C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_42_41
         symbol [ SLIDE_DOWN %tmp.27 44 36 46 ];
         %tmp.27 = getv %tmp.26 :SLIDE_DOWN;
         invoke %tmp.24 %tmp.25(%tmp.27);
-[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc" 45 12 ]
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc" 45 12 ]
         %tmp.28 = true;
         ret %tmp.28;
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_42_41_46_8_stop:
-        goto @C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_42_13_46_8_if_end;
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_42_13_46_8_if_end:
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_37_13_46_8_if_end:
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_32_8_46_8_if_end:
-[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc" 47 8 ]
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_42_41_46_8_stop:
+        goto @C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_42_13_46_8_if_end;
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_42_13_46_8_if_end:
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_37_13_46_8_if_end:
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_32_8_46_8_if_end:
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc" 47 8 ]
         %tmp.29 = false;
         ret %tmp.29;
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_29_60_48_4_stop:
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_29_60_48_4_stop:
     }
-    [ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc"; @line = 50; @symbol_functiondef = [sendBluetoothMessage,50,13,33]; @symbol_param<0> = [commandValue,50,34,46]; @symbol_param<0>_type<0> = [String,50,50,56]; ]
+    [ @file = "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc"; @line = 50; @symbol_functiondef = [sendBluetoothMessage,50,13,33]; @symbol_param<0> = [commandValue,50,34,46]; @symbol_param<0>_type<0> = [String,50,50,56]; ]
     function sendBluetoothMessage(commandValue as String) as Void {
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_50_66_52_4_start:
-[ "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc" 51 8 ]
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_50_66_52_4_start:
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc" 51 8 ]
         symbol [ Communications %tmp.1 51 8 22 ];
         %tmp.1 = getm $.Toybox.Communications;
         symbol [ transmit %tmp.2 51 23 31 ];
@@ -213,9 +213,9 @@ C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_50_66
         %tmp.12 = getv ? :GarminConnectionListener;
         %tmp.9 = newc %tmp.12 ();
         invoke %tmp.1 %tmp.2(%tmp.7, %tmp.8, %tmp.9);
-C__Users_carme_VSCode_Projects_SpotifyRemote_source_VolumeTouchDelegate_mc_50_66_52_4_stop:
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchDelegate_mc_50_66_52_4_stop:
     }
 }
-[ @file = "C:\Users\carme\VSCode Projects\SpotifyRemote\source\VolumeTouchDelegate.mc"; @line = 1; ]
+[ @file = "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchDelegate.mc"; @line = 1; ]
 <init> {
 }

@@ -1,5 +1,6 @@
 import Toybox.WatchUi;
 import Toybox.Graphics;
+using Toybox.Graphics;
 
 class VolumeTouchView extends WatchUi.View {
 
@@ -8,7 +9,7 @@ class VolumeTouchView extends WatchUi.View {
     }
 
     function onUpdate(dc as Dc) as Void {
-        dc.setColor(Graphics.COLOR_DARK_GRAY, Graphics.COLOR_BLACK);
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
 
         var width = dc.getWidth();

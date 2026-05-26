@@ -1,0 +1,244 @@
+[ @file = "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [WatchUi,1,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Graphics,2,14,22]; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [Graphics,3,13,21]; ]
+using Toybox.Graphics;
+[ @file = "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc"; @line = 5; @symbol_classdef = [VolumeTouchView,5,6,21]; @symbol_extends<0> = [WatchUi,5,30,37]; @symbol_extends<1> = [View,5,38,42]; ]
+class VolumeTouchView extends WatchUi.View {
+    [ @file = "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc"; @line = 7; @symbol_functiondef = [initialize,7,13,23]; ]
+    function initialize() as Void {
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchView_mc_7_26_9_4_start:
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc" 8 8 ]
+        symbol [ View %tmp.2 8 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 8 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchView_mc_7_26_9_4_stop:
+    }
+    [ @file = "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc"; @line = 11; @symbol_functiondef = [onUpdate,11,13,21]; @symbol_param<0> = [dc,11,22,24]; @symbol_param<0>_type<0> = [Dc,11,28,30]; ]
+    function onUpdate(dc as Dc) as Void {
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchView_mc_11_40_38_4_start:
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc" 12 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 12 8 10 ];
+        symbol [ setColor %tmp.2 12 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 12 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 12 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        symbol [ Graphics %tmp.5 12 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 12 51 62 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc" 13 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 13 8 10 ];
+        symbol [ clear %tmp.8 13 11 16 ];
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc" 15 8 ]
+        [ "C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchView_mc_11_40_38_4_start" "C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchView_mc_11_40_38_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 15 12 17 ];
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 15 20 22 ];
+        symbol [ getWidth %tmp.10 15 23 31 ];
+        %tmp.10 = getv function %tmp.9 :getWidth;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        lputv %width.1 %tmp.11;
+        symbol [ width %width.1 15 12 17 ];
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc" 16 8 ]
+        [ "C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchView_mc_11_40_38_4_start" "C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchView_mc_11_40_38_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 16 12 18 ];
+        %tmp.12 = lgetv %dc;
+        symbol [ dc %tmp.12 16 21 23 ];
+        symbol [ getHeight %tmp.13 16 24 33 ];
+        %tmp.13 = getv function %tmp.12 :getHeight;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        lputv %height.2 %tmp.14;
+        symbol [ height %height.2 16 12 18 ];
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc" 17 8 ]
+        [ "C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchView_mc_11_40_38_4_start" "C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchView_mc_11_40_38_4_stop" ]
+        %centerX.3 = local;
+        symbol [ centerX %centerX.3 17 12 19 ];
+        %tmp.15 = lgetv %width.1;
+        symbol [ width %tmp.15 17 22 27 ];
+        %tmp.16 = 2;
+        %tmp.17 = div %tmp.15 %tmp.16;
+        lputv %centerX.3 %tmp.17;
+        symbol [ centerX %centerX.3 17 12 19 ];
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc" 18 8 ]
+        [ "C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchView_mc_11_40_38_4_start" "C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchView_mc_11_40_38_4_stop" ]
+        %centerY.4 = local;
+        symbol [ centerY %centerY.4 18 12 19 ];
+        %tmp.18 = lgetv %height.2;
+        symbol [ height %tmp.18 18 22 28 ];
+        %tmp.19 = 2;
+        %tmp.20 = div %tmp.18 %tmp.19;
+        lputv %centerY.4 %tmp.20;
+        symbol [ centerY %centerY.4 18 12 19 ];
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc" 21 8 ]
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 21 8 10 ];
+        symbol [ setColor %tmp.22 21 11 19 ];
+        %tmp.22 = getv function %tmp.21 :setColor;
+        symbol [ Graphics %tmp.23 21 20 28 ];
+        %tmp.23 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.24 21 29 40 ];
+        %tmp.24 = getv %tmp.23 :COLOR_BLACK;
+        symbol [ Graphics %tmp.25 21 42 50 ];
+        %tmp.25 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.26 21 51 68 ];
+        %tmp.26 = getv %tmp.25 :COLOR_TRANSPARENT;
+        invoke %tmp.21 %tmp.22(%tmp.24, %tmp.26);
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc" 22 8 ]
+        %tmp.27 = lgetv %dc;
+        symbol [ dc %tmp.27 22 8 10 ];
+        symbol [ setPenWidth %tmp.28 22 11 22 ];
+        %tmp.28 = getv function %tmp.27 :setPenWidth;
+        %tmp.29 = 4;
+        invoke %tmp.27 %tmp.28(%tmp.29);
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc" 23 8 ]
+        %tmp.30 = lgetv %dc;
+        symbol [ dc %tmp.30 23 8 10 ];
+        symbol [ drawLine %tmp.31 23 11 19 ];
+        %tmp.31 = getv function %tmp.30 :drawLine;
+        %tmp.32 = 0;
+        %tmp.33 = lgetv %centerY.4;
+        symbol [ centerY %tmp.33 23 23 30 ];
+        %tmp.34 = lgetv %width.1;
+        symbol [ width %tmp.34 23 32 37 ];
+        %tmp.35 = lgetv %centerY.4;
+        symbol [ centerY %tmp.35 23 39 46 ];
+        invoke %tmp.30 %tmp.31(%tmp.32, %tmp.33, %tmp.34, %tmp.35);
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc" 26 8 ]
+        %tmp.36 = lgetv %dc;
+        symbol [ dc %tmp.36 26 8 10 ];
+        symbol [ setColor %tmp.37 26 11 19 ];
+        %tmp.37 = getv function %tmp.36 :setColor;
+        symbol [ Graphics %tmp.38 26 20 28 ];
+        %tmp.38 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.39 26 29 40 ];
+        %tmp.39 = getv %tmp.38 :COLOR_WHITE;
+        symbol [ Graphics %tmp.40 26 42 50 ];
+        %tmp.40 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.41 26 51 68 ];
+        %tmp.41 = getv %tmp.40 :COLOR_TRANSPARENT;
+        invoke %tmp.36 %tmp.37(%tmp.39, %tmp.41);
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc" 29 8 ]
+        %tmp.42 = lgetv %dc;
+        symbol [ dc %tmp.42 29 8 10 ];
+        symbol [ drawText %tmp.43 29 11 19 ];
+        %tmp.43 = getv function %tmp.42 :drawText;
+        %tmp.44 = lgetv %centerX.3;
+        symbol [ centerX %tmp.44 29 20 27 ];
+        %tmp.45 = lgetv %centerY.4;
+        symbol [ centerY %tmp.45 29 29 36 ];
+        %tmp.46 = 60;
+        %tmp.47 = sub %tmp.45 %tmp.46;
+        symbol [ Graphics %tmp.48 29 43 51 ];
+        %tmp.48 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.49 29 52 63 ];
+        %tmp.49 = getv %tmp.48 :FONT_MEDIUM;
+        %tmp.50 = "+ VOLUME";
+        symbol [ Graphics %tmp.51 29 77 85 ];
+        %tmp.51 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.52 29 86 105 ];
+        %tmp.52 = getv %tmp.51 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.42 %tmp.43(%tmp.44, %tmp.47, %tmp.49, %tmp.50, %tmp.52);
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc" 32 8 ]
+        %tmp.53 = lgetv %dc;
+        symbol [ dc %tmp.53 32 8 10 ];
+        symbol [ drawText %tmp.54 32 11 19 ];
+        %tmp.54 = getv function %tmp.53 :drawText;
+        %tmp.55 = lgetv %centerX.3;
+        symbol [ centerX %tmp.55 32 20 27 ];
+        %tmp.56 = lgetv %centerY.4;
+        symbol [ centerY %tmp.56 32 29 36 ];
+        %tmp.57 = 25;
+        %tmp.58 = add %tmp.56 %tmp.57;
+        symbol [ Graphics %tmp.59 32 43 51 ];
+        %tmp.59 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.60 32 52 63 ];
+        %tmp.60 = getv %tmp.59 :FONT_MEDIUM;
+        %tmp.61 = "- VOLUME";
+        symbol [ Graphics %tmp.62 32 77 85 ];
+        %tmp.62 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.63 32 86 105 ];
+        %tmp.63 = getv %tmp.62 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.53 %tmp.54(%tmp.55, %tmp.58, %tmp.60, %tmp.61, %tmp.63);
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc" 35 8 ]
+        %tmp.64 = lgetv %dc;
+        symbol [ dc %tmp.64 35 8 10 ];
+        symbol [ setColor %tmp.65 35 11 19 ];
+        %tmp.65 = getv function %tmp.64 :setColor;
+        symbol [ Graphics %tmp.66 35 20 28 ];
+        %tmp.66 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.67 35 29 42 ];
+        %tmp.67 = getv %tmp.66 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.68 35 44 52 ];
+        %tmp.68 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.69 35 53 70 ];
+        %tmp.69 = getv %tmp.68 :COLOR_TRANSPARENT;
+        invoke %tmp.64 %tmp.65(%tmp.67, %tmp.69);
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc" 36 8 ]
+        %tmp.70 = lgetv %dc;
+        symbol [ dc %tmp.70 36 8 10 ];
+        symbol [ drawText %tmp.71 36 11 19 ];
+        %tmp.71 = getv function %tmp.70 :drawText;
+        %tmp.72 = lgetv %width.1;
+        symbol [ width %tmp.72 36 20 25 ];
+        %tmp.73 = 35;
+        %tmp.74 = sub %tmp.72 %tmp.73;
+        %tmp.75 = lgetv %centerY.4;
+        symbol [ centerY %tmp.75 36 32 39 ];
+        %tmp.76 = 10;
+        %tmp.77 = sub %tmp.75 %tmp.76;
+        symbol [ Graphics %tmp.78 36 46 54 ];
+        %tmp.78 = getm $.Toybox.Graphics;
+        symbol [ FONT_GLANCE %tmp.79 36 55 66 ];
+        %tmp.79 = getv %tmp.78 :FONT_GLANCE;
+        %tmp.80 = "Skip >";
+        symbol [ Graphics %tmp.81 36 78 86 ];
+        %tmp.81 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_RIGHT %tmp.82 36 87 105 ];
+        %tmp.82 = getv %tmp.81 :TEXT_JUSTIFY_RIGHT;
+        invoke %tmp.70 %tmp.71(%tmp.74, %tmp.77, %tmp.79, %tmp.80, %tmp.82);
+[ "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc" 37 8 ]
+        %tmp.83 = lgetv %dc;
+        symbol [ dc %tmp.83 37 8 10 ];
+        symbol [ drawText %tmp.84 37 11 19 ];
+        %tmp.84 = getv function %tmp.83 :drawText;
+        %tmp.85 = 35;
+        %tmp.86 = lgetv %centerY.4;
+        symbol [ centerY %tmp.86 37 24 31 ];
+        %tmp.87 = 10;
+        %tmp.88 = sub %tmp.86 %tmp.87;
+        symbol [ Graphics %tmp.89 37 38 46 ];
+        %tmp.89 = getm $.Toybox.Graphics;
+        symbol [ FONT_GLANCE %tmp.90 37 47 58 ];
+        %tmp.90 = getv %tmp.89 :FONT_GLANCE;
+        %tmp.91 = "< Prev";
+        symbol [ Graphics %tmp.92 37 70 78 ];
+        %tmp.92 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_LEFT %tmp.93 37 79 96 ];
+        %tmp.93 = getv %tmp.92 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.83 %tmp.84(%tmp.85, %tmp.88, %tmp.90, %tmp.91, %tmp.93);
+C__Users_carme_VSCode_Projects_garmin_spotify_project_spotify_remote_watch_source_VolumeTouchView_mc_11_40_38_4_stop:
+    }
+}
+[ @file = "C:\Users\carme\VSCode Projects\garmin-spotify-project\spotify-remote-watch\source\VolumeTouchView.mc"; @line = 1; ]
+<init> {
+}

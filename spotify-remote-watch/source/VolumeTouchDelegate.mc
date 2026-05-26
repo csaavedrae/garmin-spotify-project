@@ -8,12 +8,13 @@ class VolumeTouchDelegate extends WatchUi.InputDelegate {
     }
 
     // INTERCEPT SCREEN TOUCHES
-    function onTap(clickEvent as WatchUi.ClickEvent) as Boolean {
+    function onTap(clickEvent as WatchUi.ClickEvent) {
         var coordinates = clickEvent.getCoordinates();
         var tapY = coordinates[1]; // Get Y axis coordinate position
 
         // Target active view dimension properties
-        var viewHeight = WatchUi.getCurrentView()[0].getHeight();
+        //var viewHeight = WatchUi.getCurrentView()[0].getHeight(); Commenting for debugging
+        var viewHeight = 454;
 
         if (tapY < (viewHeight / 2)) {
             // Tapped Top Half of Watch Screen
@@ -26,7 +27,7 @@ class VolumeTouchDelegate extends WatchUi.InputDelegate {
     }
 
     // INTERCEPT PHYSICAL DEVICE BUTTON PRESSES
-    function onKey(keyEvent as WatchUi.KeyEvent) as Boolean {
+    function onKey(keyEvent as WatchUi.KeyEvent){
         var key = keyEvent.getKey();
 
         if (key == WatchUi.KEY_ENTER) { 
@@ -47,7 +48,11 @@ class VolumeTouchDelegate extends WatchUi.InputDelegate {
         return false;
     }
 
-    function sendBluetoothMessage(commandValue as String) as Void {
-        Communications.transmit({"action" => commandValue}, null, new GarminConnectionListener());
+    function sendBluetoothMessage(commandValue) as Void {
+        Communications.transmit(
+            {"action" => commandValue}, 
+            null,
+            null as Communications.ConnectionListener
+         );
     }
 }

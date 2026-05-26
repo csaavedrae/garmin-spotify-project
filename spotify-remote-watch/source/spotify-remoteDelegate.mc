@@ -1,5 +1,22 @@
 import Toybox.Lang;
 import Toybox.WatchUi;
+import Toybox.Communications;
+using Toybox.System;
+
+class MyConnectionListener extends Communications.ConnectionListener {
+
+    function initialize() {
+        ConnectionListener.initialize();
+    }
+
+    function onComplete() as Void {
+        System.println("Message sent successfully");
+    }
+
+    function onError() as Void {
+        System.println("Message failed");
+    }
+}
 
 class SpotifyRemoteDelegate extends WatchUi.BehaviorDelegate {
 
@@ -29,21 +46,27 @@ class SpotifyRemoteDelegate extends WatchUi.BehaviorDelegate {
 
     // Helper function to send data to the phone companion app
     function sendRemoteCommand(commandString) as Void {
-        var listener = new ConnectionListener();
-        Communications.transmit(
-            {"action" => commandString}, // The message payload
-            null, 
-            listener
-        );
-    }
-    function sendBluetoothMessage(commandValue as String) as Void {
-        Communications.transmit({"action" => commandValue}, null, new GarminConnectionListener());
-    }
+        var listener = new MyConnectionListener();
 
+        Communications.transmit(
+            {"action" => commandString},
+            null,
+            listener
+            );
+    }
+    function sendBluetoothMessage(commandValue) as Void {
+        var listener = new MyConnectionListener();
+        
+        Communications.transmit(
+            {"action" => commandValue},
+            null,
+            listener
+            );
+    }
 }
 
 // Simple listener to track if the phone actually received the message
-class ConnectionListener extends Communications.ConnectionListener {
+class ConnectionListener {
     function onComplete() {
         System.println("Command sent successfully!");
     }
