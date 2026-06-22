@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             "bd3245ea-175c-451c-b85c-58e898904fb9";
 
     // Spotify Config
-    private static final String SPOTIFY_CLIENT_ID = "c196a88a370e461c9687ae590b152674"; // harcoding for testing   BuildConfig.SPOTIFY_CLIENT_ID;
+    private static final String SPOTIFY_CLIENT_ID = BuildConfig.SPOTIFY_CLIENT_ID;
 
     private static final String SPOTIFY_REDIRECT_URI =
             "com.example.spotifyremote://callback";
