@@ -170,7 +170,7 @@ This project was built to understand:
 - Multi-view navigation in Connect IQ (view stack with `pushView` / `popView`)
 - Separating credentials from code using `BuildConfig` and `local.properties`
 
-And the humbling discovery at the end: Garmin already ships a native Music Controls widget. Read the [lessons learned post on LinkedIn](#) for the full story.
+And the humbling discovery at the end: Garmin already ships a native Music Controls widget. Read the [lessons learned post on LinkedIn](https://www.linkedin.com/posts/carmensaavedra_productmanagement-ai-lessonslearned-share-7472691803910148096-6u9P/?utm_source=share&utm_medium=member_desktop&rcm=ACoAABE_2zoBTb--ynxQqLO2fxREEAIJk4vNqpQ) for the full story.
 
 ---
 
